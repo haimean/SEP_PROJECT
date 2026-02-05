@@ -1,7 +1,6 @@
-
-import { FileUploader } from '../components/FileUploader';
 import { ConversionOptions } from '../components/ConversionOptions';
 import { ConvertButton } from '../components/ConvertButton';
+import { FileUploader } from '../components/FileUploader';
 import { Preview } from '../components/Preview';
 import { useAppStore } from '../hooks/useAppStore';
 
@@ -63,5 +62,8 @@ export function ConversionPage() {
         </div>
       </div>
     </div>
+    
   );
+
+  
 }

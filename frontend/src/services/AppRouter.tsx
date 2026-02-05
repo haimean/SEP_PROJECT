@@ -1,7 +1,12 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { MainLayout } from '../layout/MainLayout';
-import { ConversionPage } from '../pages/ConversionPage';
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
+import AutoTrainPage from "../pages/AutoTrainPage";
+import { ConversionPage } from "../pages/ConversionPage";
+import HomePage from "@/pages/HomePage";
+import { MainLayout } from "../layout/MainLayout";
+
+<Route path="/autotrain" element={<AutoTrainPage />} />;
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -19,6 +24,15 @@ export default function AppRouter() {
         <Routes>
           <Route
             path="/"
+            element={
+              <MainLayout>
+                <HomePage />
+              </MainLayout>
+            }
+          />
+          <Route path="/auto-train" element={<AutoTrainPage />} />
+          <Route
+            path="/chatbot"
             element={
               <MainLayout>
                 <ConversionPage />
