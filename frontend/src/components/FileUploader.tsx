@@ -1,10 +1,11 @@
+import { File, Upload, X } from 'lucide-react';
 import React, { useCallback } from 'react';
-import { useDropzone } from 'react-dropzone';
-import { Upload, File, X } from 'lucide-react';
-import { useMutation } from '@tanstack/react-query';
+
 import { apiService } from '../services/api';
-import { useAppStore } from '../hooks/useAppStore';
 import toast from 'react-hot-toast';
+import { useAppStore } from '../hooks/useAppStore';
+import { useDropzone } from 'react-dropzone';
+import { useMutation } from '@tanstack/react-query';
 
 export const FileUploader: React.FC = () => {
   const { uploadedFile, setUploadedFile } = useAppStore();
@@ -113,3 +114,4 @@ export const FileUploader: React.FC = () => {
     </div>
   );
 };
+

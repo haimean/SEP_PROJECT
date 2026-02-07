@@ -25,9 +25,9 @@ export default function AppRouter() {
           <Route
             path="/"
             element={
-              <MainLayout>
+            
                 <HomePage />
-              </MainLayout>
+           
             }
           />
           <Route path="/auto-train" element={<AutoTrainPage />} />
